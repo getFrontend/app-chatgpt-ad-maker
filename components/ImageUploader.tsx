@@ -78,23 +78,23 @@ export default function ImageUploader() {
         <div className="cursor-pointer" onClick={handleButtonClick}>
           <div className="flex flex-col items-center">
             <Upload className="w-12 h-12 text-muted-foreground mb-4" />
-            <p className="text-base sm:text-lg text-foreground mb-2">Drag and drop your image here</p>
+            <p className="text-base sm:text-xl text-foreground mb-2">Drag and drop your image here</p>
             <p className="text-sm text-muted-foreground mb-4">or</p>
-            <Button variant="outline">Choose Image</Button>
+            <Button>Choose Image</Button>
           </div>
         </div>
       </div>
       <form onSubmit={handleUrlSubmit} className="flex space-x-2">
         <Input
           type="url"
-          placeholder="Enter image URL"
+          placeholder="Paste image URL"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           className="flex-grow"
         />
-        <Button type="submit">
+        <Button type="submit" className="sm:w-36">
           <Link className="w-4 h-4 mr-2" />
-          Add URL
+          <span className="hidden sm:block">Add URL</span>
         </Button>
       </form>
     </div>

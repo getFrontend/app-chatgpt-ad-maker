@@ -89,7 +89,7 @@ export default function ImageEditor() {
       const data = imageData.data
 
       // Clear canvas
-      ctx.fillStyle = "#1f2937"
+      ctx.fillStyle = "#a2badb"
       ctx.fillRect(0, 0, size.width, size.height)
 
       // Calculate total dot size (including spacing)
@@ -211,10 +211,10 @@ export default function ImageEditor() {
               <Slider
                 value={[dotSize]}
                 onValueChange={handleDotSizeChange}
-                min={1}
+                min={2}
                 max={20}
                 step={1}
-                className="flex-grow"
+                className="flex-grow cursor-grab"
               />
               <span className="text-sm text-gray-400 tabular-nums w-12 text-right">{dotSize}px</span>
             </div>
@@ -226,10 +226,10 @@ export default function ImageEditor() {
               <Slider
                 value={[dotSpacing]}
                 onValueChange={handleDotSpacingChange}
-                min={0}
-                max={20}
+                min={1}
+                max={10}
                 step={1}
-                className="flex-grow"
+                className="flex-grow cursor-grab"
               />
               <span className="text-sm text-gray-400 tabular-nums w-12 text-right">{dotSpacing}px</span>
             </div>
